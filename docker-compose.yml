@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  mongo:
+    container_name: docker_entorypoint_init_mongodb
+    image: mongo:7.0.5
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+      MONGO_INITDB_DATABASE: root
+      TZ: Asia/Tokyo
