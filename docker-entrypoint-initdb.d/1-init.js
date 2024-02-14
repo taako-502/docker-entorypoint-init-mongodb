@@ -1,8 +1,8 @@
 db = db.getSiblingDB("testdb")
-db.users.drop()
+// db.users.drop()
 db.users.insertMany([
   {
-    name: "John Doe",
+    name: "John Doe2",
     age: 30,
     email: "john.doe@example.com",
   },
